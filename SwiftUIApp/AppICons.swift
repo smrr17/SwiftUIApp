@@ -9,7 +9,21 @@ import SwiftUI
 
 struct AppICons: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Image(systemName: "person.fill.badge.plus")
+            .renderingMode(.original
+            )
+            
+            .resizable()
+//            .aspectRatio(contentMode: .fit)
+//            .scaledToFit()
+//            .font(.caption)
+//            .font(.system(size: 75))
+            .foregroundColor(.custom)
+            .frame(width: 400,height: 400,alignment: .center)
+//            .clipped()
+//            .padding()
+      
+//
     }
 }
 

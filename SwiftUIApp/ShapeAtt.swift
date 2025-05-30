@@ -9,7 +9,15 @@ import SwiftUI
 
 struct ShapeAtt: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+        Capsule().trim(from: 0.5,to: 1.0)
+//            .fill(.pink).foregroundColor(.green)
+            .stroke(.cyan,style: StrokeStyle(
+                lineWidth: 12,
+                lineCap: .round,
+                dash: [33]
+            ))
+            
     }
 }
 
