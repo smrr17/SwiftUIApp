@@ -19,10 +19,29 @@ struct AppICons: View {
 //            .font(.caption)
 //            .font(.system(size: 75))
             .foregroundColor(.custom)
-            .frame(width: 400,height: 400,alignment: .center)
+            .frame(width: 29,height: 28,alignment: .center)
 //            .clipped()
 //            .padding()
-      
+        
+        
+        
+        Image(systemName: "heart.fill")
+            .font(.system(size: 40)).background(
+                Circle().fill(
+                    LinearGradient(gradient: Gradient(colors: [Color.red,Color.blue,Color.green]), startPoint: .bottom, endPoint: .leading)
+                ).frame(
+                    width: 120,
+                    height: 120
+                   
+                ).overlay(
+                    Circle().fill(Color.white).frame(
+                        width: 35,
+                        height: 35
+                  
+                    ).overlay(Text("1").fontWeight(.bold)).shadow(color: .gray, radius: 10,x: 12,y: 23),
+                    alignment: .bottomTrailing
+                )
+            )
 //
     }
 }

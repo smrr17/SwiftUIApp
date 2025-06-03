@@ -9,7 +9,21 @@ import SwiftUI
 
 struct ScrollViewInApp: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ScrollView() {
+            LazyVStack{
+                ForEach(0..<50){ index in
+                    ScrollView(.horizontal,showsIndicators: false,content:  {
+                        LazyHStack{
+                            ForEach(0..<50){ index in
+                                Rectangle().fill(Color.white).frame(width: 200,height: 200).cornerRadius(10).shadow(color: Color.black, radius: 10).padding()
+                            }
+                        }
+                        })
+                    
+                }
+              
+            }
+        }
     }
 }
 

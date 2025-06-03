@@ -9,7 +9,28 @@ import SwiftUI
 
 struct SafeArea: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+  
+            
+            
+        ZStack{
+            
+            //background
+            Color.cyan
+                .edgesIgnoringSafeArea(.all)
+            
+            
+            
+            //foreground
+                VStack{
+                    Text("hiiii")
+                    Spacer()
+                }
+                .frame(maxWidth: .infinity,maxHeight: .infinity).background(Color.red)
+                
+            }
+            
+        
+        
     }
 }
 

@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct BindingApp: View {
+    @State var title : String = "Shahmeer"
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack{
+            Text(title)
+            mainView(title: $title)
+        }
+      
+        
     }
 }
 
 #Preview {
     BindingApp()
+}
+
+struct mainView : View {
+    @Binding var title : String ;
+    var body: some View {
+        
+        Button(action: {
+           title = "ali"
+        }, label: {
+            Text("change title")
+        })
+    
+    }
 }
